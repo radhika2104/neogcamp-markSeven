@@ -54,7 +54,7 @@ footer p{
 
 .text-input{
     display: block;
-    width: 45%;
+    width: 40%;
     margin: 3rem 5rem 1rem 9rem;
     font-family: inherit;
     font-size: large;
@@ -73,7 +73,7 @@ footer p{
 .output{
     height: 10rem;
     display: block;
-    width: 45%;
+    width: 40%;
     margin: 0rem 5rem 3rem 9rem;
     font-family: inherit;
     font-size: large;
