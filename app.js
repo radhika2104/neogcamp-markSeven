@@ -16,7 +16,7 @@ function constructURL(textinput){
     return serviceURL + '?text=' + textinput };
 
 function errorHandler(error){
-    console.log('Error: ',error)
+    
     if (error instanceof TypeError)
     {
         outputarea.innerText = 'Error Alert! It seems the people of Navi are busy fishing. Try again in an hour!'
