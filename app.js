@@ -41,7 +41,14 @@ function clickHandler() {
     outputarea.style.backgroundColor = colors.white;
     outputarea.innerText = '';
     var translationText = textinput.value;
-    dofetch(translationText);
+    if (translationText.length === 0){
+        outputarea.innerText = 'Please enter something to translate!';
+        outputarea.style.backgroundColor = colors.errorColor;
+
+    } else {
+        dofetch(translationText);
+    }
+    
 };
 
 translateBtn.addEventListener("click", clickHandler)
