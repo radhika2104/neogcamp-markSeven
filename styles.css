@@ -10,6 +10,9 @@ body{
     background-image: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)),url("avatar.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     /*  gif source: https://giphy.com/gifs/star-james-toronto-10nQVrNmo9klUI  */
     
 }
@@ -29,7 +32,9 @@ nav{
 }
 
 footer{
-    position: fixed;bottom: 0;right: 0; left: 0;
+    /* position: fixed;bottom: 0;right: 0; left: 0; */
+    margin-top: auto;
+    margin-bottom: 0px;
     background-color: var(--primary-color);
     text-align: center;
 }

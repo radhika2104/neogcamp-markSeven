@@ -7,11 +7,24 @@ var outputarea = document.querySelector('#output');
 
 var serviceURL = 'https://api.funtranslations.com/translate/navi.json';
 
+var colors = {
+    errorColor: '#fecdd3',
+    white :'#FFFFFF'
+}
+
 function constructURL(textinput){
     return serviceURL + '?text=' + textinput };
 
 function errorHandler(error){
     console.log('Error: ',error)
+    if (error instanceof TypeError)
+    {
+        outputarea.innerText = 'Error Alert! It seems the people of Navi are busy fishing. Try again in an hour!'
+    } else {
+        outputarea.innerText = error
+    }
+    
+    outputarea.style.backgroundColor = colors.errorColor;
 };
 
 
@@ -24,6 +37,9 @@ function dofetch(textinput){
 };
 
 function clickHandler() {
+    // Put styling back to default in case error occured in last call
+    outputarea.style.backgroundColor = colors.white;
+    outputarea.innerText = '';
     var translationText = textinput.value;
     dofetch(translationText);
 };
